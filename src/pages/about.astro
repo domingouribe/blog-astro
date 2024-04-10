@@ -1,6 +1,78 @@
-<body>
-	<a href="/">Inicio</a>
-	<a href="/about">Nosotros</a>
-	<a href="/blog">Blog</a>
-	<h1>Acerca de nosotros</h1>
-</body>
+---
+import Navigation from "../components/shared/Navigation.astro";
+import "../styles/global.css";
+const pageTitle = "Sobre mi";
+const identity = {
+	firstName: "Domingo",
+	country: "Chile",
+	ocupation: "Web developer",
+	hobbies: ["draw", "learn about technologies", "make wooden furniture"],
+};
+const skills = ["html", "css", "SASS", "React", "Astro", "Redacción"];
+
+const happy = true;
+const finished = false;
+const goal = 2;
+
+const skillColor = "peru";
+const fontWeight = "bolder";
+const textCase = "uppercase";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{pageTitle}</title>
+		<style define:vars={{ skillColor, fontWeight, textCase }}>
+			:root {
+				color-scheme: light dark;
+			}
+			body {
+				background-color: rgb(26, 20, 63);
+			}
+			h1 {
+				color: purple;
+				font-size: 4rem;
+				text-transform: var(--textCase);
+			}
+			.skill {
+				color: var(--skillColor);
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<Navigation />
+		<h1>{pageTitle}</h1>
+
+		<article>
+			<p>Algo sobre mí:</p>
+			<p>Me llamo {identity.firstName} y trabajo como {identity.ocupation}</p>
+			<p>Tengo habilidades avanzadas en:</p>
+			<ul>
+				{skills.map((skill) => <li class="skill">{skill}</li>)}
+			</ul>
+
+			{
+				identity.hobbies.length >= 4 && (
+					<p>
+						Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
+						{identity.hobbies[1]}
+					</p>
+				)
+			}
+
+			{happy && <p>¡Estoy feliz desarrollando mi revista!</p>}
+			{finished && <p>¡He terminado este tutorial!</p>}
+			{
+				goal === 2 ? (
+					<p>Mi objetivo es terminarlo en 2 días</p>
+				) : (
+					<p>Mi objetivo no son 2 días</p>
+				)
+			}
+		</article>
+	</body>
+</html>

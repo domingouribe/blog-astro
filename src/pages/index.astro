@@ -1,19 +1,23 @@
 ---
-
+import "../styles/global.css";
+import Footer from "../components/shared/Footer.astro";
+import Header from "../components/shared/Header.astro";
+const pageTitle = "Inicio";
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<a href="/">Inicio</a>
-		<a href="/about">Nosotros</a>
-		<a href="/blog">Blog</a>
+		<Header />
+		<h1>{pageTitle}</h1>
+		<Footer />
+		<script>
+			import "../scripts/menu";
+		</script>
 	</body>
 </html>

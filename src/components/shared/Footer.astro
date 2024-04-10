@@ -1,0 +1,26 @@
+---
+import Social from "./Social.astro";
+
+const platform = "github";
+const username = "larutadelaquena";
+---
+
+<footer>
+	<p>
+		Más información en <a href={`https://www.${platform}.com/${username}`}
+			>{platform}</a
+		>
+	</p>
+	<Social platform="Twitter" username="larutadelaquena" />
+	<Social platform="Instagram" username="larutadelaquena" />
+	<Social platform="YouTube" username="larutadelaquena" />
+</footer>
+
+<style>
+	footer {
+		display: flex;
+		gap: 1rem;
+		margin-top: 2rem;
+		color: white;
+	}
+</style>
