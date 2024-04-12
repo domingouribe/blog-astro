@@ -1,9 +1,21 @@
 ---
+import Brand from "./Brand.astro";
 import Hamburguer from "./Hamburguer.astro";
 import Navigation from "./Navigation.astro";
 ---
 
-<header>
+<header class="Header">
+	<Brand />
 	<Hamburguer />
 	<Navigation />
 </header>
+
+<style>
+	.Header {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: black;
+	}
+</style>

@@ -1,28 +1,13 @@
 ---
-import "../styles/global.css";
-import Footer from "../components/shared/Footer.astro";
-import Header from "../components/shared/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Inicio";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-		<h1>{pageTitle}</h1>
-		<p>
-			Quede en: <a href="https://docs.astro.build/es/tutorial/4-layouts/"
-				>"Check in: Unidad 4 - Plantillas"</a
-			>
-		</p>
-		<Footer />
-		<script>
-			import "../scripts/menu";
-		</script>
-	</body>
-</html>
+<BaseLayout>
+  <h1>{pageTitle}</h1>
+  <p>
+    Quede en: <a href="https://docs.astro.build/es/tutorial/4-layouts/"
+      >"Check in: Unidad 4 - Plantillas"</a
+    >
+  </p>
+</BaseLayout>
