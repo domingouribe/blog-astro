@@ -2,29 +2,29 @@
 
 ---
 
-<div class="hamburger">
-	<span class="line"></span>
-	<span class="line"></span>
-	<span class="line"></span>
+<div class="Hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
 </div>
 
-<style>
-	.hamburger {
-		padding-right: 20px;
-		cursor: pointer;
-	}
+<style lang="scss">
+  /* estilos de la barra de navegación*/
+  .Hamburger {
+    cursor: pointer;
+    display: none;
 
-	.hamburger .line {
-		display: block;
-		width: 40px;
-		height: 5px;
-		margin-bottom: 10px;
-		background-color: #ff9776;
-	}
-
-	@media screen and (min-width: 636px) {
-		.hamburger {
-			display: none;
-		}
-	}
+    .line {
+      display: block;
+      width: 40px;
+      height: 5px;
+      margin-bottom: 10px;
+      background-color: #ff9776;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .Hamburguer {
+      display: none;
+    }
+  }
 </style>

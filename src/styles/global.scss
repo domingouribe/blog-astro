@@ -1,0 +1,31 @@
+@use "./normalize";
+
+html {
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #1a144d;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  line-height: 1.5;
+  color: white;
+}
+
+a {
+  color: yellow;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 3rem;
+  color: peru;
+}

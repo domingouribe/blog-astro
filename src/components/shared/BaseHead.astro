@@ -1,0 +1,17 @@
+---
+import "../../styles/global.scss";
+interface Props {
+  pageTitle: string;
+  description: string;
+}
+const { pageTitle, description } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+</head>
