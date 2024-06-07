@@ -1,0 +1,49 @@
+---
+import Bars from "./Bars.astro";
+import Brand from "./Brand.astro";
+---
+
+<Brand />
+<Bars />
+
+<nav class="Header-nav">
+	<a href="/" class="Header-link">item 1</a>
+	<a href="/" class="Header-link">item 2</a>
+	<a href="/" class="Header-link">item 3</a>
+	<a href="/" class="Header-link">item 4</a>
+	<a href="/" class="Header-link">item 5</a>
+</nav>
+
+<style lang="scss">
+	.Header-nav {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1em;
+
+		@media screen and (max-width: 768px) {
+			position: absolute;
+			top: 93px;
+			background-color: rgb(39, 5, 50);
+			width: 45vw;
+			right: 2em;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s ease;
+			height: 0vh;
+			overflow: hidden;
+			// pointer-events: none;
+
+			&.isActive {
+				height: 25vh;
+			}
+		}
+	}
+	.Header-link {
+		color: aqua;
+		text-decoration: none;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+	}
+</style>

@@ -1,23 +1,30 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob('../pages/posts/*.md');
+const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Blog";
-
+import BlogPost from "@/components/BlogPost.astro";
 ---
 
-<BaseLayout pageTitle="Blog">
+<BaseLayout pageTitle="Blog" description="Mi Blog">
 	<h1>{pageTitle}</h1>
-	<p>Todas nuestras noticias</p>
+	<p>Todos mis artículos sobre la quena y arte en general</p>
 
-	<nav>
-		{allPosts.map((post) => <a href={post.url}>{post.frontmatter.title}</a>)}
-	</nav>
+	{
+		allPosts.map((post) => (
+			<BlogPost
+				url={post.url}
+				title={post.frontmatter.title}
+				description={post.frontmatter.description}
+				img={post.frontmatter.image.url}
+			/>
+		))
+	}
 </BaseLayout>
 
 <style>
 	nav {
 		display: flex;
 		flex-flow: column nowrap;
-		gap: 1rem
+		gap: 1rem;
 	}
 </style>

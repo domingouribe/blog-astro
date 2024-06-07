@@ -3,23 +3,23 @@ import Header from "../components/shared/Header.astro";
 import Footer from "../components/shared/Footer.astro";
 import BaseHead from "../components/shared/BaseHead.astro";
 interface Props {
-  pageTitle: string;
-  description: string;
+	pageTitle: string;
+	description: string;
 }
 const { pageTitle, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <BaseHead pageTitle={pageTitle} description={description} />
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
-    <Footer />
-
-    <script>
-      import "../scripts/menu";
-    </script>
-  </body>
+	<BaseHead pageTitle={pageTitle} description={description} />
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+		<script>
+			import "../typescript/menu";
+		</script>
+	</body>
 </html>

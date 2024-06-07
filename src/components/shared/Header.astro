@@ -1,23 +1,20 @@
 ---
-import Brand from "./Brand.astro";
-import Hamburguer from "./Hamburguer.astro";
-import Navigation from "./Navigation.astro";
+// import NavBar from "./NavBar.astro";
+import NavBar from "./NavBar.astro";
 ---
 
 <header class="Header">
-  <Brand />
-  <Navigation />
-  <Hamburguer />
+	<NavBar />
 </header>
 
 <style>
-  .Header {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(63, 62, 62);
-    position: relative;
-    height: 100px;
-  }
+	.Header {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		background-color: rgb(63, 62, 62);
+		position: relative;
+		padding: 2em;
+	}
 </style>

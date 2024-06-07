@@ -1,7 +1,5 @@
 ---
-import Navigation from "../components/shared/Navigation.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/global.css";
 const pageTitle = "Sobre mi";
 const identity = {
 	firstName: "Domingo",
@@ -20,7 +18,7 @@ const fontWeight = "bolder";
 const textCase = "uppercase";
 ---
 
-<BaseLayout pageTitle="Acerca de nosotros">
+<BaseLayout pageTitle="Acerca de nosotros" description="algo acá">
 	<article>
 		<p>Algo sobre mí:</p>
 		<p>Me llamo {identity.firstName} y trabajo como {identity.ocupation}</p>
